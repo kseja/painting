@@ -111,7 +111,9 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media(min-width:800px){.about{grid-template-columns:280px 1fr}}
 .about__portrait{
   aspect-ratio:3/4;border-radius:20px;max-width:280px;width:100%;
-  background:linear-gradient(135deg,#6f8a72,#b9cdb6);
+  object-fit:cover;object-position:center top;
+  background:var(--tint);
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
 }
 .about p{font-size:16px;color:var(--ink-soft)}
 .about p.bio{color:var(--text);font-size:16px}
@@ -130,6 +132,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .work:hover{transform:translateY(-3px)}
 .work__art{
   display:block;width:100%;aspect-ratio:4/5;border-radius:16px;
+  object-fit:cover;object-position:center;
+  background:var(--tint);
   box-shadow:0 8px 22px rgba(0,0,0,.08);
 }
 .work__meta{display:block;padding:10px 4px 0}
@@ -148,16 +152,17 @@ button,input,select,textarea{font:inherit;color:inherit}
 .consultation__note{display:block;font-size:13px;color:var(--ink-muted);margin-top:6px}
 .consultation__actions{display:flex;gap:8px;flex-wrap:wrap}
 
-/* REVIEWS */
+/* REVIEWS (compact strip) */
 .reviews{
-  background:var(--accent-soft);border-radius:24px;
-  padding:40px 24px;text-align:center;
+  background:var(--accent-soft);border-radius:16px;
+  padding:16px 20px;
 }
-.reviews h2{margin-top:0}
-.reviews__text{
-  font-size:17px;color:var(--ink-soft);max-width:56ch;
-  margin:0 auto 20px;
+.reviews__inner{
+  display:flex;gap:16px;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;
 }
+.reviews__inner p{margin:0;font-size:15px;color:var(--ink-soft);flex:1 1 260px}
+.reviews__inner .btn{padding:10px 18px;min-height:40px;font-size:14px;border-radius:10px}
 
 /* HOW */
 .steps-list{display:grid;gap:16px;grid-template-columns:1fr;margin:24px 0 0;list-style:none;padding:0}
@@ -304,14 +309,20 @@ button,input,select,textarea{font:inherit;color:inherit}
   display:grid;grid-template-columns:1fr;
 }
 @media(min-width:800px){.lightbox__inner{grid-template-columns:1.4fr 1fr}}
-.lightbox__art{aspect-ratio:4/3;min-height:220px}
+.lightbox__art{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:contain;
+  background:var(--tint);
+  display:block;
+}
 .lightbox__meta{padding:20px}
 .lightbox__meta h3{margin-top:0}
 .lightbox__close{
   position:absolute;top:16px;right:16px;
   width:44px;height:44px;border-radius:50%;border:0;
   background:#fff;font-size:26px;line-height:1;cursor:pointer;
-  display:grid;place-items:center;
+  display:grid;place-items:center;z-index:10;
 }
 
 /* CTA + FOOTER */
@@ -374,7 +385,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <!-- ABOUT -->
 <section class="section" id="about">
   <div class="container about">
-    <div class="about__portrait" role="img" aria-label="Екатерина Крупенко, художник-живописец"></div>
+    <img class="about__portrait" src="iam копия.jpg" alt="Екатерина Крупенко, художник-живописец" loading="lazy">
     <div>
       <h2>Кто пишет вашу картину</h2>
       <p class="bio"><b>Екатерина Крупенко</b> — художник-живописец из Клина, выпускница Тверского областного художественного училища им. А.Г. Венецианова. Более 30 лет в живописи, член Союза художников Подмосковья с 2009 года. Работы находятся в частных коллекциях в России и за рубежом. Примеры и свежие работы пришлю в чате — напишите, и подберу похожие.</p>
@@ -386,34 +397,8 @@ button,input,select,textarea{font:inherit;color:inherit}
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="section section--tinted" id="gallery">
-  <div class="container">
-    <h2>Галерея работ</h2>
-    <p class="section__lead">Несколько примеров. Нажмите на работу, чтобы рассмотреть, и «Хочу похожую» — размер подставится в конфигуратор.</p>
-    <div class="gallery" id="gallery-grid"></div>
-  </div>
-</section>
-
-<!-- CONSULTATION -->
-<section class="consultation">
-  <div class="container">
-    <div class="consultation__inner">
-      <p>
-        <strong>Нужна консультация или помощь в подборе картины?</strong> Напишите мне напрямую — подскажу и предложу варианты.
-        <span class="consultation__note">Отвечаю в течение дня.</span>
-      </p>
-      <div class="consultation__actions">
-        <a class="btn btn--primary" href="https://t.me/Kseja_K" target="_blank" rel="noopener">Написать в Telegram</a>
-        <a class="btn btn--ghost" href="mailto:kseja@mail.ru">Написать на почту</a>
-        <a class="btn btn--ghost" href="tel:+79688790533">Позвонить</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- HOW -->
-<section class="section" id="how">
+<section class="section section--tinted" id="how">
   <div class="container">
     <h2>Как это работает</h2>
     <ol class="steps-list">
@@ -444,19 +429,8 @@ button,input,select,textarea{font:inherit;color:inherit}
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section class="section" id="reviews">
-  <div class="container">
-    <div class="reviews">
-      <h2>Отзывы</h2>
-      <p class="reviews__text">Свежие отзывы клиентов и новые примеры работ — в моём Telegram-канале.</p>
-      <a class="btn btn--primary" href="https://t.me/Kseja_K" target="_blank" rel="noopener">Перейти в Telegram</a>
-    </div>
-  </div>
-</section>
-
-<!-- CONFIGURATOR -->
-<section class="section section--tinted" id="configurator">
+<!-- CONFIGURATOR (перенесён выше галереи) -->
+<section class="section" id="configurator">
   <div class="container">
     <h2>Подберите картину</h2>
     <p class="section__lead">3 шага — меньше минуты, и вы увидите ориентир по цене. Точную стоимость подтвердим после обсуждения деталей.</p>
@@ -642,6 +616,44 @@ button,input,select,textarea{font:inherit;color:inherit}
   </div>
 </section>
 
+<!-- GALLERY (перенесён под калькулятор) -->
+<section class="section section--tinted" id="gallery">
+  <div class="container">
+    <h2>Галерея работ</h2>
+    <p class="section__lead">Несколько примеров. Нажмите на работу, чтобы рассмотреть, и «Хочу похожую» — размер подставится в конфигуратор.</p>
+    <div class="gallery" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- CONSULTATION -->
+<section class="consultation">
+  <div class="container">
+    <div class="consultation__inner">
+      <p>
+        <strong>Нужна консультация или помощь в подборе картины?</strong> Напишите мне напрямую — подскажу и предложу варианты.
+        <span class="consultation__note">Отвечаю в течение дня.</span>
+      </p>
+      <div class="consultation__actions">
+        <a class="btn btn--primary" href="https://t.me/Kseja_K" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="btn btn--ghost" href="mailto:kseja@mail.ru">Написать на почту</a>
+        <a class="btn btn--ghost" href="tel:+79688790533">Позвонить</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS (компактная полоса, в ~3 раза меньше) -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="reviews">
+      <div class="reviews__inner">
+        <p>Свежие отзывы клиентов и новые примеры работ — в моём Telegram-канале.</p>
+        <a class="btn btn--primary" href="https://t.me/Kseja_K" target="_blank" rel="noopener">Перейти в Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="section">
   <div class="container">
@@ -676,7 +688,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр работы" hidden>
   <button class="lightbox__close" aria-label="Закрыть">×</button>
   <div class="lightbox__inner">
-    <div class="lightbox__art" id="lb-art"></div>
+    <img class="lightbox__art" id="lb-art" src="" alt="">
     <div class="lightbox__meta">
       <h3 id="lb-title">—</h3>
       <p id="lb-desc" class="muted">—</p>
@@ -893,7 +905,6 @@ button,input,select,textarea{font:inherit;color:inherit}
       $('#unknown-note').hidden = (s !== 'unknown');
       $('#unknown-size-note').hidden = (s !== 'unknown');
       $('#next-1').disabled = !state.subject;
-      // если «не знаю» — размер можно пропустить, кнопка «Далее» на шаге 2 активна
       const next2 = $('#next-2');
       if(next2) next2.disabled = !step2Valid();
       renderSummary();
@@ -1011,23 +1022,28 @@ button,input,select,textarea{font:inherit;color:inherit}
   $('#copy-btn').addEventListener('click', copyConfig);
   $('#copy-btn-2').addEventListener('click', copyConfig);
 
+  /* === GALLERY — реальные изображения 1.jpg … 13.jpg === */
   const WORKS = [
-    { id:1, title:'Портрет в тёплом свете',  size:{w:40, h:50},  price:52000, grad:'linear-gradient(135deg,#7a5c3e,#c79f78 60%,#e0c7a8)' },
-    { id:2, title:'Тихий натюрморт',         size:{w:50, h:40},  price:50000, grad:'linear-gradient(135deg,#4b5a3a,#8a9b6f 60%,#c9d1b0)' },
-    { id:3, title:'Полевой этюд',            size:{w:60, h:40},  price:60000, grad:'linear-gradient(135deg,#5b6b4a,#9aa77c 55%,#dfe4ce)' },
-    { id:4, title:'Вечерний пейзаж',         size:{w:70, h:50},  price:70000, grad:'linear-gradient(135deg,#3a4856,#6c7f92 55%,#c2ccd6)' },
-    { id:5, title:'Абстрактная композиция',  size:{w:50, h:70},  price:44000, grad:'linear-gradient(135deg,#8a4c3b,#c98b6a 55%,#ecd0bf)' },
-    { id:6, title:'Копия «Подсолнухи»',      size:{w:60, h:80},  price:96000, grad:'linear-gradient(135deg,#b07a20,#e4b64a 55%,#f4dfa4)' },
-    { id:7, title:'Многофигурная сцена',     size:{w:100,h:80},  price:128000,grad:'linear-gradient(135deg,#4a3f55,#8a7796 55%,#d2c8da)' },
-    { id:8, title:'Утренний свет',           size:{w:30, h:40},  price:39000, grad:'linear-gradient(135deg,#6b5a3a,#b8a173 55%,#f0e2c0)' },
-    { id:9, title:'Портрет на заказ',        size:{w:50, h:70},  price:91000, grad:'linear-gradient(135deg,#5a3f3f,#a47d7d 55%,#e8d2d2)' }
+    { id:1,  title:'Портрет в тёплом свете', size:{w:40, h:50},  price:52000,  src:'1.jpg'  },
+    { id:2,  title:'Тихий натюрморт',        size:{w:50, h:40},  price:50000,  src:'2.jpg'  },
+    { id:3,  title:'Полевой этюд',           size:{w:60, h:40},  price:60000,  src:'3.jpg'  },
+    { id:4,  title:'Вечерний пейзаж',        size:{w:70, h:50},  price:70000,  src:'4.jpg'  },
+    { id:5,  title:'Абстрактная композиция', size:{w:50, h:70},  price:44000,  src:'5.jpg'  },
+    { id:6,  title:'Копия «Подсолнухи»',     size:{w:60, h:80},  price:96000,  src:'6.jpg'  },
+    { id:7,  title:'Многофигурная сцена',    size:{w:100,h:80},  price:128000, src:'7.jpg'  },
+    { id:8,  title:'Утренний свет',          size:{w:30, h:40},  price:39000,  src:'8.jpg'  },
+    { id:9,  title:'Портрет на заказ',       size:{w:50, h:70},  price:91000,  src:'9.jpg'  },
+    { id:10, title:'Натюрморт с цветами',    size:{w:40, h:50},  price:52000,  src:'10.jpg' },
+    { id:11, title:'Пейзаж с рекой',         size:{w:60, h:40},  price:60000,  src:'11.jpg' },
+    { id:12, title:'Портрет в профиль',      size:{w:50, h:70},  price:91000,  src:'12.jpg' },
+    { id:13, title:'Этюд маслом',            size:{w:30, h:40},  price:39000,  src:'13.jpg' }
   ];
 
   function renderGallery(){
     const grid = $('#gallery-grid');
     grid.innerHTML = WORKS.map(w => `
       <button class="work" data-id="${w.id}" aria-label="Открыть работу: ${w.title}">
-        <span class="work__art" style="background:${w.grad}"></span>
+        <img class="work__art" src="${w.src}" alt="${w.title} — картина маслом" loading="lazy">
         <span class="work__meta">
           <span class="work__title">${w.title}</span>
           <span class="work__desc">Масло · ${w.size.w}×${w.size.h} · от ${new Intl.NumberFormat('ru-RU').format(w.price)} ₽</span>
@@ -1043,7 +1059,9 @@ button,input,select,textarea{font:inherit;color:inherit}
     const w = WORKS.find(x => x.id === id);
     if(!w) return;
     currentWork = w;
-    $('#lb-art').style.background = w.grad;
+    const img = $('#lb-art');
+    img.src = w.src;
+    img.alt = w.title + ' — картина маслом';
     $('#lb-title').textContent = w.title;
     $('#lb-desc').textContent = `Масло · ${w.size.w}×${w.size.h} см · от ${new Intl.NumberFormat('ru-RU').format(w.price)} ₽`;
     lightbox.hidden = false;
@@ -1055,6 +1073,8 @@ button,input,select,textarea{font:inherit;color:inherit}
     lightbox.hidden = true;
     document.body.style.overflow = '';
     currentWork = null;
+    const img = $('#lb-art');
+    if(img) img.src = '';
   }
 
   $('#gallery-grid').addEventListener('click', e => {
