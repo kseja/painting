@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F4F8F2">
+<title>Масляная живопись на заказ — от этюда до большой картины | Екатерина Крупенко</title>
+<meta name="description" content="Картины маслом на заказ: портреты, пейзажи, натюрморты, копии. Размеры от 10×10 до 200×150 см. Примерный расчёт стоимости и сроков онлайн.">
+<meta property="og:title" content="Масляная живопись на заказ — от этюда до большой картины | Екатерина Крупенко">
+<meta property="og:description" content="Портреты, пейзажи, натюрморты, копии. Размеры от 10×10 до 200×150 см.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F8F2;
+  --text:#1E2A22;
+  --accent:#6f8a72;
+  --accent-hover:#5a7360;
+  --accent-soft:#E4EEE1;
+  --muted:#8FA194;
+  --card:#FFFFFF;
+  --border:#DDE7DC;
+  --tint:#EBF1E7;
+  --ink-soft:#4a5c50;
+  --ink-muted:#6f7f72;
+  --error:#b5472f;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  font-size:16px;line-height:1.6;
+  color:var(--text);background:var(--bg);
+}
+h1,h2,h3{font-family:'Manrope',system-ui,sans-serif;line-height:1.15;margin:0 0 .5em;font-weight:600;letter-spacing:-.01em}
+h1{
+  font-size:clamp(26px,5.2vw,46px);
+  font-weight:500;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  line-height:1.2;
+}
+h2{font-size:clamp(24px,4.5vw,38px)}
+h3{font-size:clamp(18px,3vw,22px)}
+h4{font-family:'Manrope',system-ui,sans-serif}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+[hidden]{display:none!important}
+
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+.section{padding:56px 0}
+.section--tinted{background:var(--tint)}
+.section__lead{font-size:17px;color:var(--ink-soft);max-width:62ch;margin:0 0 8px}
+@media(min-width:900px){.section{padding:88px 0}}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 22px;border-radius:12px;border:1px solid transparent;
+  font-weight:600;text-decoration:none;cursor:pointer;min-height:48px;
+  transition:transform .15s ease,background .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn--primary{background:var(--accent);color:#fff}
+.btn--primary:hover{background:var(--accent-hover)}
+.btn--ghost{background:transparent;border-color:var(--accent);color:var(--accent)}
+.btn--ghost:hover{background:var(--accent-soft)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+
+.eyebrow{
+  text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;
+  color:var(--accent);margin:0 0 12px;
+}
+
+/* HERO */
+.hero{padding:40px 0 32px}
+.hero__title-row{
+  display:flex;gap:20px;align-items:flex-start;margin-bottom:20px;
+}
+.hero__title-row h1{flex:1;margin:0}
+.hero__logo{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.logo-badge{
+  width:96px;height:96px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  display:grid;place-items:center;
+  font-family:'Manrope',sans-serif;font-size:30px;font-weight:700;
+  letter-spacing:.02em;
+  box-shadow:0 10px 28px rgba(111,138,114,.28);
+}
+.logo-name{
+  text-align:center;font-size:11px;line-height:1.25;
+  color:var(--ink-muted);letter-spacing:.1em;text-transform:uppercase;
+}
+.logo-name b{display:block;color:var(--text);font-weight:600;font-size:12px}
+@media(max-width:640px){
+  .hero__title-row{gap:12px}
+  .logo-badge{width:64px;height:64px;font-size:20px}
+  .logo-name{display:none}
+}
+.hero__lead{font-size:18px;color:var(--ink-soft);margin:0 0 24px;max-width:56ch}
+.hero__actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ABOUT */
+.about{display:grid;gap:24px;grid-template-columns:1fr;align-items:start}
+@media(min-width:800px){.about{grid-template-columns:280px 1fr}}
+.about__portrait{
+  aspect-ratio:3/4;border-radius:20px;max-width:280px;width:100%;
+  background:linear-gradient(135deg,#6f8a72,#b9cdb6);
+}
+.about p{font-size:16px;color:var(--ink-soft)}
+.about p.bio{color:var(--text);font-size:16px}
+.about p.cta-line{margin-top:20px;margin-bottom:0}
+.about p.cta-line a{font-weight:600;text-decoration:none;border-bottom:1px solid var(--accent)}
+.about p.cta-line a:hover{color:var(--accent-hover);border-color:var(--accent-hover)}
+
+/* GALLERY */
+.gallery{display:grid;gap:14px;grid-template-columns:1fr;margin-top:24px}
+@media(min-width:600px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.gallery{grid-template-columns:repeat(3,1fr)}}
+.work{
+  border:0;background:transparent;padding:0;cursor:pointer;text-align:left;
+  border-radius:16px;overflow:hidden;display:block;transition:transform .2s;
+}
+.work:hover{transform:translateY(-3px)}
+.work__art{
+  display:block;width:100%;aspect-ratio:4/5;border-radius:16px;
+  box-shadow:0 8px 22px rgba(0,0,0,.08);
+}
+.work__meta{display:block;padding:10px 4px 0}
+.work__title{display:block;font-weight:600;font-size:15px}
+.work__desc{display:block;font-size:13px;color:var(--ink-muted)}
+
+/* CONSULTATION */
+.consultation{padding:16px 0 8px}
+.consultation__inner{
+  background:var(--accent-soft);
+  border-radius:20px;padding:24px;
+  display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;
+}
+.consultation__inner p{margin:0;flex:1 1 280px;color:var(--ink-soft)}
+.consultation__inner strong{color:var(--text)}
+.consultation__note{display:block;font-size:13px;color:var(--ink-muted);margin-top:6px}
+.consultation__actions{display:flex;gap:8px;flex-wrap:wrap}
+
+/* REVIEWS */
+.reviews{
+  background:var(--accent-soft);border-radius:24px;
+  padding:40px 24px;text-align:center;
+}
+.reviews h2{margin-top:0}
+.reviews__text{
+  font-size:17px;color:var(--ink-soft);max-width:56ch;
+  margin:0 auto 20px;
+}
+
+/* HOW */
+.steps-list{display:grid;gap:16px;grid-template-columns:1fr;margin:24px 0 0;list-style:none;padding:0}
+@media(min-width:700px){.steps-list{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.steps-list{grid-template-columns:repeat(4,1fr)}}
+.how__item{padding:20px;background:var(--card);border-radius:16px;border:1px solid var(--border)}
+.how__num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;
+  font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;margin-bottom:12px;
+}
+.how__item h3{font-size:17px}
+.how__item p{margin:0;font-size:15px;color:var(--ink-soft)}
+.how__item p + p{margin-top:8px}
+
+/* CONFIGURATOR */
+.steps{
+  display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin:0 0 20px;
+  scrollbar-width:thin;-webkit-overflow-scrolling:touch;
+}
+.step-chip{
+  flex:none;padding:10px 16px;border-radius:999px;
+  border:1px solid var(--border);background:var(--card);
+  font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .2s;
+}
+.step-chip.is-active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.step-chip.is-done{border-color:var(--accent);color:var(--accent)}
+.step-chip[disabled]{opacity:.45;cursor:not-allowed}
+
+.config{display:flex;flex-direction:column;gap:16px}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:20px}
+.panel__title{margin-bottom:16px}
+.panel__nav{display:flex;gap:8px;justify-content:space-between;margin-top:20px}
+.panel__actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.panel__actions .btn{flex:1 1 auto}
+.panel__alt{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
+
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 20px}
+@media(min-width:640px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:12px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:8px;
+  transition:border-color .2s,box-shadow .2s,transform .15s;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.card.is-selected{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.card__thumb{aspect-ratio:1;border-radius:10px;display:block;width:100%}
+.card__title{font-weight:600;font-size:15px}
+.card__meta{font-size:13px;color:var(--ink-muted)}
+
+.figures{margin:0 0 20px;padding:14px;background:var(--tint);border-radius:12px}
+.figures label{display:block;font-size:14px;margin-bottom:8px}
+.figures input[type=range]{width:100%;accent-color:var(--accent)}
+
+.sizes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.size{
+  padding:10px 14px;border-radius:10px;border:1px solid var(--border);
+  background:var(--card);cursor:pointer;font-size:14px;transition:all .15s;
+}
+.size:hover{border-color:var(--accent)}
+.size.is-selected{border-color:var(--accent);background:var(--accent);color:#fff}
+
+.custom{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.field{display:flex;flex-direction:column;gap:6px;flex:1;min-width:140px}
+.field label{font-size:13px;color:var(--ink-muted)}
+.field input{
+  padding:12px 14px;border:1px solid var(--border);border-radius:10px;
+  background:var(--card);min-height:44px;width:100%;
+}
+
+.preview{
+  display:flex;align-items:flex-end;justify-content:center;gap:16px;
+  padding:16px;min-height:220px;background:var(--tint);border-radius:14px;
+  margin-bottom:12px;overflow:hidden;
+}
+.preview__frame{
+  background:linear-gradient(135deg,#c9d5c5,#e4ecdf);
+  border:2px solid #a9b8a7;border-radius:4px;
+  transition:width .2s,height .2s;max-width:100%;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+  min-width:6px;min-height:6px;
+}
+.preview__person{
+  color:#a9b8a7;fill:currentColor;flex:none;align-self:flex-end;
+  transition:height .2s,width .2s;
+}
+.preview__note{font-size:13px;color:var(--ink-muted);margin:0}
+
+.error{color:var(--error);font-size:14px;margin:0 0 12px}
+.note{
+  font-size:13px;color:var(--ink-muted);background:var(--tint);
+  padding:12px 14px;border-radius:10px;border-left:3px solid var(--muted);
+}
+.note--warn{border-left-color:var(--accent);color:var(--ink-soft)}
+.note--warn strong{color:var(--text)}
+
+.checkbox{
+  display:flex;align-items:flex-start;gap:12px;padding:14px;
+  background:var(--tint);border-radius:12px;cursor:pointer;
+}
+.checkbox input{margin-top:3px;width:18px;height:18px;accent-color:var(--accent);flex:none}
+.checkbox span{font-size:15px}
+
+.calc{
+  background:var(--tint);border-radius:12px;padding:14px;
+  display:flex;flex-direction:column;gap:8px;margin-bottom:16px;
+}
+.calc__row{display:flex;justify-content:space-between;gap:12px;font-size:15px;flex-wrap:wrap}
+.calc__row--total{border-top:1px solid #d3dfd2;padding-top:10px;margin-top:4px;font-size:17px}
+.calc__row--total b{font-family:'Manrope',sans-serif;font-weight:700}
+.muted{color:var(--ink-muted);font-weight:400;font-size:13px}
+
+.included{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.included__col{background:var(--tint);border-radius:12px;padding:14px}
+.included__col h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--accent)}
+.included__col ul{margin:0;padding:0 0 0 18px;font-size:14px;color:var(--ink-soft)}
+.included__col li{margin:0 0 4px}
+@media(max-width:500px){.included{grid-template-columns:1fr}}
+
+.summary{
+  position:sticky;bottom:12px;z-index:5;
+  background:var(--card);border:1px solid var(--border);border-radius:18px;
+  padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);
+  display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;
+}
+.summary__info{flex:1 1 220px;min-width:0}
+#sum-line{font-size:14px;color:var(--ink-muted)}
+#sum-price{font-size:20px;font-weight:700;font-family:'Manrope',sans-serif}
+.summary__detail{font-size:13px;color:var(--ink-muted)}
+.summary__actions{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:640px){
+  .summary{flex-direction:column;align-items:stretch;padding:12px}
+  .summary__actions > *{flex:1}
+}
+
+/* LIGHTBOX */
+.lightbox{
+  position:fixed;inset:0;background:rgba(20,30,22,.85);
+  display:grid;place-items:center;padding:20px;z-index:100;
+}
+.lightbox__inner{
+  background:var(--bg);border-radius:20px;overflow:hidden;
+  max-width:900px;width:100%;max-height:92vh;overflow-y:auto;
+  display:grid;grid-template-columns:1fr;
+}
+@media(min-width:800px){.lightbox__inner{grid-template-columns:1.4fr 1fr}}
+.lightbox__art{aspect-ratio:4/3;min-height:220px}
+.lightbox__meta{padding:20px}
+.lightbox__meta h3{margin-top:0}
+.lightbox__close{
+  position:absolute;top:16px;right:16px;
+  width:44px;height:44px;border-radius:50%;border:0;
+  background:#fff;font-size:26px;line-height:1;cursor:pointer;
+  display:grid;place-items:center;
+}
+
+/* CTA + FOOTER */
+.cta-final{
+  background:var(--accent);color:#fff;border-radius:24px;
+  padding:40px 24px;text-align:center;
+}
+.cta-final h2{color:#fff}
+.cta-final p{color:rgba(255,255,255,.92);max-width:56ch;margin-left:auto;margin-right:auto}
+.cta-final .btn--primary{background:#fff;color:var(--accent)}
+.cta-final .btn--primary:hover{background:#F4F8F2}
+.cta-final .btn--ghost{border-color:#fff;color:#fff}
+.cta-final .btn--ghost:hover{background:rgba(255,255,255,.12)}
+.cta-final__actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.cta-final__contacts{margin-top:20px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;font-size:15px}
+.cta-final__contacts a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45)}
+
+.footer{padding:32px 0;border-top:1px solid var(--border);margin-top:56px;font-size:14px;color:var(--ink-muted)}
+.footer__inner{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+.footer__links{display:flex;gap:16px;flex-wrap:wrap}
+.footer a{color:inherit;text-decoration:none;border-bottom:1px solid transparent}
+.footer a:hover{border-color:currentColor}
+
+.toast{
+  position:fixed;left:50%;bottom:96px;transform:translateX(-50%);
+  background:var(--text);color:#fff;padding:10px 16px;border-radius:10px;
+  font-size:14px;z-index:200;box-shadow:0 8px 20px rgba(0,0,0,.2);
+  max-width:90vw;
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="hero__title-row">
+      <h1>Масляная живопись на заказ —<br>от этюда до большой картины</h1>
+      <div class="hero__logo" aria-label="Екатерина Крупенко — художник-живописец">
+        <div class="logo-badge" aria-hidden="true">ЕК</div>
+        <div class="logo-name" aria-hidden="true">
+          <b>Екатерина</b>
+          <span>Крупенко</span>
+        </div>
+      </div>
+    </div>
+    <p class="hero__lead">Портреты, пейзажи, натюрморты и копии для частных заказчиков. Размеры от 10×10 до 200×150 см — рассчитайте примерную стоимость и сроки за пару минут.</p>
+    <div class="hero__actions">
+      <a href="#configurator" class="btn btn--primary">Подобрать картину</a>
+      <a href="#gallery" class="btn btn--ghost">Смотреть галерею</a>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about">
+    <div class="about__portrait" role="img" aria-label="Екатерина Крупенко, художник-живописец"></div>
+    <div>
+      <h2>Кто пишет вашу картину</h2>
+      <p class="bio"><b>Екатерина Крупенко</b> — художник-живописец из Клина, выпускница Тверского областного художественного училища им. А.Г. Венецианова. Более 30 лет в живописи, член Союза художников Подмосковья с 2009 года. Работы находятся в частных коллекциях в России и за рубежом. Примеры и свежие работы пришлю в чате — напишите, и подберу похожие.</p>
+      <p>Пишу маслом в разных жанрах: от миниатюры 10×10 до панно 2×1,5 м. Помимо масла работаю в акварели и графике — для отдельных задач.</p>
+      <p>Каждый заказ начинается с обсуждения деталей и композиции: вы видите, что получите, до начала работы.</p>
+      <p class="note">Копии известных работ выполняю с обсуждением прав в каждом случае — расскажите, для чего нужна копия, и подскажу, как оформить корректно.</p>
+      <p class="cta-line"><a href="https://t.me/Kseja_K" target="_blank" rel="noopener">Хотите обсудить идею или прислать референс? Напишите в Telegram →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section--tinted" id="gallery">
+  <div class="container">
+    <h2>Галерея работ</h2>
+    <p class="section__lead">Несколько примеров. Нажмите на работу, чтобы рассмотреть, и «Хочу похожую» — размер подставится в конфигуратор.</p>
+    <div class="gallery" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- CONSULTATION -->
+<section class="consultation">
+  <div class="container">
+    <div class="consultation__inner">
+      <p>
+        <strong>Нужна консультация или помощь в подборе картины?</strong> Напишите мне напрямую — подскажу и предложу варианты.
+        <span class="consultation__note">Отвечаю в течение дня.</span>
+      </p>
+      <div class="consultation__actions">
+        <a class="btn btn--primary" href="https://t.me/Kseja_K" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="btn btn--ghost" href="mailto:kseja@mail.ru">Написать на почту</a>
+        <a class="btn btn--ghost" href="tel:+79688790533">Позвонить</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="section" id="how">
+  <div class="container">
+    <h2>Как это работает</h2>
+    <ol class="steps-list">
+      <li class="how__item">
+        <span class="how__num">1</span>
+        <h3>Выбираете параметры</h3>
+        <p>Сюжет, размер и срочность — прямо на этой странице.</p>
+      </li>
+      <li class="how__item">
+        <span class="how__num">2</span>
+        <h3>Отправляете заявку</h3>
+        <p>Параметры приходят мне в Telegram или на почту.</p>
+      </li>
+      <li class="how__item">
+        <span class="how__num">3</span>
+        <h3>Согласуем детали</h3>
+        <p>Уточняем точную стоимость, сроки и композицию.</p>
+        <p><b>Предоплата 30%</b> (для портретов — 50%), остальное — после готовности работы.</p>
+        <p>Работаю официально как самозанятая, заказ фиксируем договором.</p>
+      </li>
+      <li class="how__item">
+        <span class="how__num">4</span>
+        <h3>Получаете картину</h3>
+        <p>Пишу картину для вас и передаю готовую работу.</p>
+        <p>Доставка по России и за рубеж. Упаковка и страховая оценка обсуждаются индивидуально, стоимость доставки рассчитывается отдельно.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="reviews">
+      <h2>Отзывы</h2>
+      <p class="reviews__text">Свежие отзывы клиентов и новые примеры работ — в моём Telegram-канале.</p>
+      <a class="btn btn--primary" href="https://t.me/Kseja_K" target="_blank" rel="noopener">Перейти в Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURATOR -->
+<section class="section section--tinted" id="configurator">
+  <div class="container">
+    <h2>Подберите картину</h2>
+    <p class="section__lead">3 шага — меньше минуты, и вы увидите ориентир по цене. Точную стоимость подтвердим после обсуждения деталей.</p>
+
+    <div class="steps" id="steps" role="tablist" aria-label="Шаги конфигуратора">
+      <button class="step-chip is-active" data-step="1" role="tab" aria-selected="true">1. Сюжет</button>
+      <button class="step-chip" data-step="2" role="tab" aria-selected="false">2. Размер</button>
+      <button class="step-chip" data-step="3" role="tab" aria-selected="false">3. Срочность</button>
+      <button class="step-chip" data-step="4" role="tab" aria-selected="false">4. Расчёт</button>
+    </div>
+
+    <div class="config">
+
+      <!-- STEP 1 -->
+      <div class="panel" data-panel="1">
+        <h3 class="panel__title">Что будем писать?</h3>
+        <div class="cards" role="radiogroup" aria-label="Сюжет картины">
+          <button class="card" data-subject="portrait" role="radio" aria-checked="false">
+            <span class="card__thumb" style="background:linear-gradient(135deg,#5a3f3f,#a47d7d)"></span>
+            <span class="card__title">Портрет</span>
+            <span class="card__meta">×1.3 (+0.3 за каждую фигуру)</span>
+          </button>
+          <button class="card" data-subject="multi" role="radio" aria-checked="false">
+            <span class="card__thumb" style="background:linear-gradient(135deg,#4a3f55,#8a7796)"></span>
+            <span class="card__title">Многофигурная композиция</span>
+            <span class="card__meta">×1.4</span>
+          </button>
+          <button class="card" data-subject="still" role="radio" aria-checked="false">
+            <span class="card__thumb" style="background:linear-gradient(135deg,#4b5a3a,#8a9b6f)"></span>
+            <span class="card__title">Натюрморт</span>
+            <span class="card__meta">×1.0</span>
+          </button>
+          <button class="card" data-subject="landscape" role="radio" aria-checked="false">
+            <span class="card__thumb" style="background:linear-gradient(135deg,#3a4856,#6c7f92)"></span>
+            <span class="card__title">Пейзаж</span>
+            <span class="card__meta">×1.0</span>
+          </button>
+          <button class="card" data-subject="abstract" role="radio" aria-checked="false">
+            <span class="card__thumb" style="background:linear-gradient(135deg,#8a4c3b,#c98b6a)"></span>
+            <span class="card__title">Абстракция</span>
+            <span class="card__meta">×0.5</span>
+          </button>
+          <button class="card" data-subject="unknown" role="radio" aria-checked="false">
+            <span class="card__thumb" style="background:linear-gradient(135deg,#6b6b6b,#c3c3b8)"></span>
+            <span class="card__title">Не знаю / помогите выбрать</span>
+            <span class="card__meta">Обсудим в чате</span>
+          </button>
+        </div>
+
+        <div class="figures" id="figures-block" hidden>
+          <label for="figures">Количество фигур на портрете: <b id="figures-val">1</b></label>
+          <input type="range" id="figures" min="1" max="10" value="1" step="1">
+        </div>
+
+        <p class="note" id="unknown-note" hidden>Не страшно! Выберите примерный размер (или пропустите этот шаг) — и я подскажу подходящие варианты в чате.</p>
+
+        <div class="panel__nav">
+          <span></span>
+          <button class="btn btn--primary" data-next="2" id="next-1" disabled>Далее</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="panel" data-panel="2" hidden>
+        <h3 class="panel__title">Размер картины</h3>
+        <p class="note" id="unknown-size-note" hidden>Размер можно не выбирать — обсудим в чате.</p>
+        <div class="sizes" role="group" aria-label="Стандартные размеры">
+          <button class="size" data-w="10" data-h="10">10×10</button>
+          <button class="size" data-w="20" data-h="30">20×30</button>
+          <button class="size" data-w="30" data-h="40">30×40</button>
+          <button class="size" data-w="40" data-h="50">40×50</button>
+          <button class="size" data-w="50" data-h="70">50×70</button>
+          <button class="size" data-w="60" data-h="80">60×80</button>
+          <button class="size" data-w="80" data-h="100">80×100</button>
+        </div>
+
+        <div class="custom">
+          <div class="field">
+            <label for="custom-w">Ширина, см</label>
+            <input type="number" id="custom-w" min="10" max="200" step="1" inputmode="numeric" placeholder="например, 45">
+          </div>
+          <div class="field">
+            <label for="custom-h">Высота, см</label>
+            <input type="number" id="custom-h" min="10" max="200" step="1" inputmode="numeric" placeholder="например, 60">
+          </div>
+        </div>
+
+        <div class="preview" id="preview" aria-live="polite">
+          <div class="preview__frame" id="preview-frame"></div>
+          <svg class="preview__person" id="preview-person" viewBox="0 0 40 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+            <circle cx="20" cy="14" r="13"/>
+            <path d="M4 170 V40 Q4 26 20 26 Q36 26 36 40 V170 Z"/>
+          </svg>
+        </div>
+        <p class="preview__note" id="preview-note">Выберите размер</p>
+
+        <p class="error" id="size-error" hidden></p>
+
+        <div class="panel__nav">
+          <button class="btn btn--ghost" data-back="1">Назад</button>
+          <button class="btn btn--primary" data-next="3" id="next-2" disabled>Далее</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="panel" data-panel="3" hidden>
+        <h3 class="panel__title">Срочность</h3>
+        <label class="checkbox">
+          <input type="checkbox" id="urgent">
+          <span><b>Срочно (+30%)</b> — сокращаю срок за счёт плотного графика, качество не страдает. Точный срок назову в чате.</span>
+        </label>
+
+        <div class="panel__nav">
+          <button class="btn btn--ghost" data-back="2">Назад</button>
+          <button class="btn btn--primary" data-next="4">Далее</button>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="panel" data-panel="4" hidden>
+        <h3 class="panel__title">Ваш заказ</h3>
+
+        <div class="calc">
+          <div class="calc__row"><span>Сюжет</span><b id="c-subject">—</b></div>
+          <div class="calc__row"><span>Размер</span><b id="c-size">—</b></div>
+          <div class="calc__row"><span>Срочность</span><b id="c-urgent">—</b></div>
+          <div class="calc__row calc__row--total"><span>Ориентировочная стоимость</span><b id="c-price">—</b></div>
+          <div class="calc__row"><span>Срок</span><b id="c-term">—</b></div>
+        </div>
+
+        <div class="included">
+          <div class="included__col">
+            <h4>Входит в стоимость</h4>
+            <ul>
+              <li>Работа художника</li>
+              <li>Грунт и холст</li>
+            </ul>
+          </div>
+          <div class="included__col">
+            <h4>Не входит</h4>
+            <ul>
+              <li>Рама</li>
+              <li>Доставка и упаковка</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="note note--warn">
+          <strong>Ориентир.</strong> Финальную стоимость фиксируем после обсуждения эскиза — она не увеличится без вашего согласия. Предоплата 30% перед началом работы (для портретов — 50%), остальное — после готовности. Работаю официально как самозанятая, заказ фиксируем договором.
+        </p>
+
+        <div class="panel__actions">
+          <a class="btn btn--primary" id="tg-btn-2" href="https://t.me/Kseja_K" target="_blank" rel="noopener">Отправить в Telegram</a>
+          <a class="btn btn--ghost" id="mail-btn-2" href="mailto:kseja@mail.ru">Отправить на почту</a>
+          <button class="btn btn--ghost" id="copy-btn-2" type="button">Скопировать</button>
+        </div>
+
+        <div class="panel__alt">
+          <a href="tel:+79688790533">Позвонить: +7 968 879-05-33</a>
+        </div>
+
+        <div class="panel__nav">
+          <button class="btn btn--ghost" data-back="3">Назад</button>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- STICKY SUMMARY -->
+      <div class="summary" id="summary" hidden aria-live="polite">
+        <div class="summary__info">
+          <div id="sum-line">—</div>
+          <div id="sum-price">—</div>
+          <div id="sum-price-detail" class="summary__detail"></div>
+        </div>
+        <div class="summary__actions">
+          <button class="btn btn--ghost" id="copy-btn" type="button">Скопировать</button>
+          <a class="btn btn--ghost" id="mail-btn" href="mailto:kseja@mail.ru">На почту</a>
+          <a class="btn btn--primary" id="tg-btn" href="https://t.me/Kseja_K" target="_blank" rel="noopener">В Telegram</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-final">
+      <h2>Готовы обсудить вашу картину?</h2>
+      <p>Оставьте заявку — пришлю варианты и точную стоимость. Или напишите напрямую.</p>
+      <div class="cta-final__actions">
+        <a class="btn btn--primary" href="#configurator">Собрать конфигурацию</a>
+        <a class="btn btn--ghost" href="https://t.me/Kseja_K" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+      <div class="cta-final__contacts">
+        <a href="mailto:kseja@mail.ru">kseja@mail.ru</a>
+        <a href="tel:+79688790533">+7 968 879-05-33</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>© <span id="year"></span> Крупенко Екатерина Николаевна · картины маслом на заказ</div>
+    <div class="footer__links">
+      <a href="https://t.me/Kseja_K" target="_blank" rel="noopener">Telegram</a>
+      <a href="mailto:kseja@mail.ru">kseja@mail.ru</a>
+      <a href="tel:+79688790533">+7 968 879-05-33</a>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр работы" hidden>
+  <button class="lightbox__close" aria-label="Закрыть">×</button>
+  <div class="lightbox__inner">
+    <div class="lightbox__art" id="lb-art"></div>
+    <div class="lightbox__meta">
+      <h3 id="lb-title">—</h3>
+      <p id="lb-desc" class="muted">—</p>
+      <button class="btn btn--primary" id="lb-want" type="button">Хочу похожую</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+  'use strict';
+
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+  const RATE = 100000;
+  const MIN_PRICE = 3000;
+  const SUBJECTS = {
+    portrait:  { label:'Портрет',                   coeff:1.3 },
+    multi:     { label:'Многофигурная композиция',  coeff:1.4 },
+    still:     { label:'Натюрморт',                 coeff:1.0 },
+    landscape: { label:'Пейзаж',                    coeff:1.0 },
+    abstract:  { label:'Абстракция',                coeff:0.5 },
+    unknown:   { label:'Не знаю / помогите выбрать',coeff:null }
+  };
+  const PRESETS = [[10,10],[20,30],[30,40],[40,50],[50,70],[60,80],[80,100]];
+
+  const state = {
+    subject: null,
+    figures: 1,
+    width: null,
+    height: null,
+    urgent: false,
+    step: 1
+  };
+
+  const fmt = n => new Intl.NumberFormat('ru-RU').format(Math.round(n)) + ' ₽';
+
+  function debounce(fn, wait){
+    let t;
+    return function(...args){
+      clearTimeout(t);
+      t = setTimeout(()=>fn.apply(this,args), wait);
+    };
+  }
+
+  function toast(msg){
+    const el = $('#toast');
+    el.textContent = msg;
+    el.hidden = false;
+    clearTimeout(el._t);
+    el._t = setTimeout(()=>{ el.hidden = true; }, 2200);
+  }
+
+  function coeff(){
+    if(!state.subject) return null;
+    if(state.subject === 'unknown') return null;
+    if(state.subject === 'portrait') return 1.3 + 0.3 * (state.figures - 1);
+    return SUBJECTS[state.subject].coeff;
+  }
+
+  function sizeOk(w=state.width, h=state.height){
+    if(!w || !h) return false;
+    if(w < 10 || h < 10) return false;
+    if(w > 200 || h > 200) return false;
+    if((w * h) / 10000 > 3) return false;
+    return true;
+  }
+
+  function calc(){
+    const c = coeff();
+    if(c === null) return null;
+    if(!sizeOk()) return null;
+    const area = (state.width / 100) * (state.height / 100);
+    let p = area * RATE * c * (state.urgent ? 1.3 : 1);
+    p = Math.max(p, MIN_PRICE);
+    return Math.round(p / 100) * 100;
+  }
+
+  function term(){
+    if(!state.width || !state.height) return null;
+    return Math.max(state.width, state.height) <= 40 ? 'от 1 недели' : 'от 2 недель';
+  }
+
+  function step2Valid(){
+    if(state.width && state.height) return sizeOk();
+    return state.subject === 'unknown';
+  }
+
+  function subjectText(){
+    if(!state.subject) return '—';
+    if(state.subject === 'portrait') return `Портрет (${state.figures} фиг.)`;
+    return SUBJECTS[state.subject].label;
+  }
+
+  function buildText(){
+    const lines = [];
+    lines.push('Здравствуйте! Хочу картину маслом.');
+    if(state.subject === 'unknown'){
+      lines.push('Сюжет: пока не выбрал(а) — помогите, пожалуйста');
+    } else {
+      lines.push('Сюжет: ' + subjectText());
+    }
+    if(state.width && state.height){
+      lines.push(`Размер: ${state.width}×${state.height} см`);
+    } else {
+      lines.push('Размер: пока не выбрал(а)');
+    }
+    lines.push('Срочность: ' + (state.urgent ? 'да (+30%)' : 'нет'));
+    const p = calc();
+    if(p){
+      lines.push(`Ориентировочная стоимость: ${fmt(p)}`);
+      lines.push('Ориентировочный срок: ' + term() + (state.urgent ? ' — срочно' : ''));
+    } else {
+      lines.push('Стоимость и сроки: обсудим в чате');
+    }
+    lines.push('Комментарий: ');
+    return lines.join('\n');
+  }
+
+  function updateLinks(){
+    const text = buildText();
+    const tgUrl = 'https://t.me/Kseja_K?text=' + encodeURIComponent(text);
+    const mailUrl = 'mailto:kseja@mail.ru?subject=' + encodeURIComponent('Заказ картины маслом') + '&body=' + encodeURIComponent(text);
+    const tg1 = $('#tg-btn'); if(tg1) tg1.href = tgUrl;
+    const tg2 = $('#tg-btn-2'); if(tg2) tg2.href = tgUrl;
+    const m1 = $('#mail-btn'); if(m1) m1.href = mailUrl;
+    const m2 = $('#mail-btn-2'); if(m2) m2.href = mailUrl;
+  }
+
+  function renderSummary(){
+    const hasAny = state.subject || (state.width && state.height);
+    $('#summary').hidden = !hasAny;
+
+    const parts = [];
+    parts.push(state.subject ? subjectText() : 'Сюжет не выбран');
+    if(state.width && state.height) parts.push(`${state.width}×${state.height} см`);
+    if(state.urgent) parts.push('срочно');
+    $('#sum-line').textContent = parts.join(' · ');
+
+    const p = calc();
+    if(p){
+      $('#sum-price').textContent = `≈ ${fmt(p)} · ${term()}`;
+      $('#sum-price-detail').textContent = 'Финальная цена — после согласования эскиза';
+    } else if(state.subject === 'unknown'){
+      $('#sum-price').textContent = 'Стоимость обсудим в чате';
+      $('#sum-price-detail').textContent = '';
+    } else if(!state.subject){
+      $('#sum-price').textContent = 'Выберите сюжет';
+      $('#sum-price-detail').textContent = '';
+    } else {
+      $('#sum-price').textContent = 'Укажите размер';
+      $('#sum-price-detail').textContent = '';
+    }
+
+    updateLinks();
+  }
+
+  function renderCalc(){
+    $('#c-subject').textContent = subjectText();
+    $('#c-size').textContent = (state.width && state.height) ? `${state.width}×${state.height} см` : '—';
+    $('#c-urgent').textContent = state.urgent ? 'Да (+30%)' : 'Нет';
+    const p = calc();
+    if(p){
+      $('#c-price').textContent = fmt(p);
+      $('#c-term').textContent = term() + (state.urgent ? ' — срочно' : '');
+    } else if(state.subject === 'unknown'){
+      $('#c-price').textContent = 'Обсудим в чате';
+      $('#c-term').textContent = '—';
+    } else {
+      $('#c-price').textContent = '—';
+      $('#c-term').textContent = '—';
+    }
+    updateLinks();
+  }
+
+  function canReach(target){
+    if(target >= 2 && !state.subject) return false;
+    if(target >= 3 && !step2Valid()) return false;
+    return true;
+  }
+
+  function setStep(n){
+    state.step = n;
+    $$('.panel').forEach(p => { p.hidden = Number(p.dataset.panel) !== n; });
+    $$('.step-chip').forEach(c => {
+      const s = Number(c.dataset.step);
+      c.classList.toggle('is-active', s === n);
+      c.classList.toggle('is-done', s < n);
+      c.setAttribute('aria-selected', s === n ? 'true' : 'false');
+      c.disabled = s > state.step && !canReach(s);
+    });
+    if(n === 4) renderCalc();
+    renderSummary();
+    const steps = $('#steps');
+    if(steps && window.innerWidth < 900){
+      steps.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  }
+
+  $$('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const s = card.dataset.subject;
+      state.subject = s;
+      $$('.card').forEach(c => {
+        const on = c === card;
+        c.classList.toggle('is-selected', on);
+        c.setAttribute('aria-checked', on ? 'true' : 'false');
+      });
+      $('#figures-block').hidden = (s !== 'portrait');
+      $('#unknown-note').hidden = (s !== 'unknown');
+      $('#unknown-size-note').hidden = (s !== 'unknown');
+      $('#next-1').disabled = !state.subject;
+      // если «не знаю» — размер можно пропустить, кнопка «Далее» на шаге 2 активна
+      const next2 = $('#next-2');
+      if(next2) next2.disabled = !step2Valid();
+      renderSummary();
+    });
+  });
+
+  $('#figures').addEventListener('input', e => {
+    state.figures = Number(e.target.value);
+    $('#figures-val').textContent = state.figures;
+    renderSummary();
+  });
+
+  $$('.size').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.width = Number(btn.dataset.w);
+      state.height = Number(btn.dataset.h);
+      $$('.size').forEach(b => b.classList.toggle('is-selected', b === btn));
+      $('#custom-w').value = '';
+      $('#custom-h').value = '';
+      onSizeChange();
+    });
+  });
+
+  function onSizeChange(){
+    const w = state.width, h = state.height;
+    let err = '';
+    if(w && h){
+      if(w < 10 || h < 10) err = 'Минимальная сторона — 10 см.';
+      else if(w > 200 || h > 200) err = 'Максимальная сторона — 200 см.';
+      else if((w * h) / 10000 > 3) err = 'Максимальная площадь — 3 м² (например, 200×150 см).';
+    }
+    const errEl = $('#size-error');
+    errEl.textContent = err;
+    errEl.hidden = !err;
+    renderPreview();
+    $('#next-2').disabled = !step2Valid();
+    renderSummary();
+  }
+
+  const onCustomInput = debounce(() => {
+    const w = Number($('#custom-w').value) || null;
+    const h = Number($('#custom-h').value) || null;
+    state.width = w;
+    state.height = h;
+    if(w && h) $$('.size').forEach(b => b.classList.remove('is-selected'));
+    onSizeChange();
+  }, 160);
+
+  $('#custom-w').addEventListener('input', onCustomInput);
+  $('#custom-h').addEventListener('input', onCustomInput);
+
+  function renderPreview(){
+    const frame = $('#preview-frame');
+    const person = $('#preview-person');
+    const note = $('#preview-note');
+    const w = state.width, h = state.height;
+    if(!w || !h){
+      frame.style.width = '0'; frame.style.height = '0';
+      person.style.height = '0';
+      note.textContent = 'Выберите размер';
+      return;
+    }
+    const HUMAN_CM = 170;
+    const maxCm = Math.max(HUMAN_CM, w, h, 50);
+    const px = 170 / maxCm;
+    frame.style.width = (w * px) + 'px';
+    frame.style.height = (h * px) + 'px';
+    person.style.height = (HUMAN_CM * px) + 'px';
+    const area = (w / 100) * (h / 100);
+    note.textContent = `${w}×${h} см · ${area.toFixed(2)} м²`;
+  }
+
+  $('#urgent').addEventListener('change', e => {
+    state.urgent = e.target.checked;
+    renderSummary();
+  });
+
+  $$('[data-next]').forEach(b => {
+    b.addEventListener('click', () => {
+      const target = Number(b.dataset.next);
+      if(!canReach(target)) return;
+      setStep(target);
+    });
+  });
+  $$('[data-back]').forEach(b => {
+    b.addEventListener('click', () => setStep(Number(b.dataset.back)));
+  });
+  $$('.step-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const target = Number(chip.dataset.step);
+      if(target <= state.step){ setStep(target); return; }
+      if(!canReach(target)) return;
+      setStep(target);
+    });
+  });
+
+  async function copyConfig(){
+    const text = buildText();
+    try{
+      await navigator.clipboard.writeText(text);
+      toast('Конфигурация скопирована');
+    }catch(err){
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly','');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); toast('Конфигурация скопирована'); }
+      catch(e){ alert(text); }
+      document.body.removeChild(ta);
+    }
+  }
+  $('#copy-btn').addEventListener('click', copyConfig);
+  $('#copy-btn-2').addEventListener('click', copyConfig);
+
+  const WORKS = [
+    { id:1, title:'Портрет в тёплом свете',  size:{w:40, h:50},  price:52000, grad:'linear-gradient(135deg,#7a5c3e,#c79f78 60%,#e0c7a8)' },
+    { id:2, title:'Тихий натюрморт',         size:{w:50, h:40},  price:50000, grad:'linear-gradient(135deg,#4b5a3a,#8a9b6f 60%,#c9d1b0)' },
+    { id:3, title:'Полевой этюд',            size:{w:60, h:40},  price:60000, grad:'linear-gradient(135deg,#5b6b4a,#9aa77c 55%,#dfe4ce)' },
+    { id:4, title:'Вечерний пейзаж',         size:{w:70, h:50},  price:70000, grad:'linear-gradient(135deg,#3a4856,#6c7f92 55%,#c2ccd6)' },
+    { id:5, title:'Абстрактная композиция',  size:{w:50, h:70},  price:44000, grad:'linear-gradient(135deg,#8a4c3b,#c98b6a 55%,#ecd0bf)' },
+    { id:6, title:'Копия «Подсолнухи»',      size:{w:60, h:80},  price:96000, grad:'linear-gradient(135deg,#b07a20,#e4b64a 55%,#f4dfa4)' },
+    { id:7, title:'Многофигурная сцена',     size:{w:100,h:80},  price:128000,grad:'linear-gradient(135deg,#4a3f55,#8a7796 55%,#d2c8da)' },
+    { id:8, title:'Утренний свет',           size:{w:30, h:40},  price:39000, grad:'linear-gradient(135deg,#6b5a3a,#b8a173 55%,#f0e2c0)' },
+    { id:9, title:'Портрет на заказ',        size:{w:50, h:70},  price:91000, grad:'linear-gradient(135deg,#5a3f3f,#a47d7d 55%,#e8d2d2)' }
+  ];
+
+  function renderGallery(){
+    const grid = $('#gallery-grid');
+    grid.innerHTML = WORKS.map(w => `
+      <button class="work" data-id="${w.id}" aria-label="Открыть работу: ${w.title}">
+        <span class="work__art" style="background:${w.grad}"></span>
+        <span class="work__meta">
+          <span class="work__title">${w.title}</span>
+          <span class="work__desc">Масло · ${w.size.w}×${w.size.h} · от ${new Intl.NumberFormat('ru-RU').format(w.price)} ₽</span>
+        </span>
+      </button>
+    `).join('');
+  }
+
+  let currentWork = null;
+  const lightbox = $('#lightbox');
+
+  function openLightbox(id){
+    const w = WORKS.find(x => x.id === id);
+    if(!w) return;
+    currentWork = w;
+    $('#lb-art').style.background = w.grad;
+    $('#lb-title').textContent = w.title;
+    $('#lb-desc').textContent = `Масло · ${w.size.w}×${w.size.h} см · от ${new Intl.NumberFormat('ru-RU').format(w.price)} ₽`;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    $('.lightbox__close').focus();
+  }
+
+  function closeLightbox(){
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+    currentWork = null;
+  }
+
+  $('#gallery-grid').addEventListener('click', e => {
+    const btn = e.target.closest('.work');
+    if(btn) openLightbox(Number(btn.dataset.id));
+  });
+
+  $('.lightbox__close').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => {
+    if(e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+  });
+  lightbox.addEventListener('keydown', e => {
+    if(e.key !== 'Tab') return;
+    const items = lightbox.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])');
+    if(!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  });
+
+  function applyWorkSize(work){
+    const { w, h } = work.size;
+    const preset = PRESETS.find(([a,b]) =>
+      (a === w && b === h) || (a === h && b === w)
+    );
+    state.width = w;
+    state.height = h;
+    if(preset){
+      $$('.size').forEach(b => {
+        const on = Number(b.dataset.w) === w && Number(b.dataset.h) === h;
+        b.classList.toggle('is-selected', on);
+      });
+      $('#custom-w').value = '';
+      $('#custom-h').value = '';
+    } else {
+      $$('.size').forEach(b => b.classList.remove('is-selected'));
+      $('#custom-w').value = w;
+      $('#custom-h').value = h;
+    }
+    onSizeChange();
+  }
+
+  $('#lb-want').addEventListener('click', () => {
+    if(!currentWork) return;
+    applyWorkSize(currentWork);
+    closeLightbox();
+    const target = state.subject ? 2 : 1;
+    setStep(target);
+    document.getElementById('configurator').scrollIntoView({behavior:'smooth', block:'start'});
+    if(!state.subject) toast('Осталось выбрать сюжет');
+  });
+
+  $('#year').textContent = new Date().getFullYear();
+  renderGallery();
+  renderSummary();
+  renderPreview();
+  setStep(1);
+})();
+</script>
+</body>
+</html>
