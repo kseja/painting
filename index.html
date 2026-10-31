@@ -314,9 +314,23 @@ button,input,select,textarea{font:inherit;color:inherit}
   display:grid;place-items:center;font-size:14px;font-weight:700;
   box-shadow:0 2px 6px rgba(0,0,0,.2);
 }
+.card__thumb-wrap{
+  position:relative;
+  display:block;
+  width:100%;
+  padding-top:100%;
+  border-radius:10px;
+  overflow:hidden;
+  background:var(--tint);
+}
 .card__thumb{
-  aspect-ratio:1;border-radius:10px;display:block;width:100%;
-  object-fit:cover;object-position:center;background:var(--tint);
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
 }
 .card__title{font-weight:600;font-size:14px;line-height:1.25}
 @media(max-width:900px){
@@ -511,14 +525,24 @@ button,input,select,textarea{font:inherit;color:inherit}
 .lightbox__nav--prev{left:16px}
 .lightbox__nav--next{right:16px}
 @media(max-width:600px){
-  .lightbox__inner{width:100vw;border-radius:0;max-height:100vh;height:100vh}
-  .lightbox__art{max-height:calc(100vh - 140px)}
+  .lightbox{padding:0}
+  .lightbox__inner{width:100%;max-width:100%;border-radius:0;max-height:100vh;height:100vh}
+  .lightbox__art{
+    width:100%;
+    height:calc(100vh - 120px);
+    max-height:calc(100vh - 120px);
+    object-fit:contain;
+    background:var(--tint);
+    display:block;
+    flex:none;
+  }
   .lightbox__meta{padding:12px 16px;gap:10px}
   .lightbox__meta-main h3{font-size:16px}
   .lightbox__price{font-size:18px}
-  .lightbox__nav{width:44px;height:44px;font-size:26px;top:calc(50% - 40px)}
+  .lightbox__nav{width:44px;height:44px;font-size:26px;top:calc(50% - 60px)}
   .lightbox__nav--prev{left:8px}
   .lightbox__nav--next{right:8px}
+  .lightbox__close{width:40px;height:40px;top:8px;right:8px;font-size:24px}
   .lightbox__counter{font-size:11px;padding:3px 8px}
 }
 
@@ -613,7 +637,7 @@ button,input,select,textarea{font:inherit;color:inherit}
       <p>Пишу маслом в разных жанрах: от миниатюры 10×10 до панно 2×1,5 м. Помимо масла работаю в акварели и графике — для отдельных задач.</p>
       <p>Каждый заказ начинается с обсуждения деталей и композиции: вы видите, что получите, до начала работы.</p>
       <p class="note">Копии известных работ выполняю с обсуждением прав в каждом случае — расскажите, для чего нужна копия, и подскажу, как оформить корректно.</p>
-      <p class="cta-line"><a href="https://t.me/Kseja_K" target="_blank" rel="noopener">Хотите обсудить идею или прислать референс? Напишите в Telegram →</a></p>
+      <p class="cta-line">Хотите обсудить идею или прислать референс? <a href="https://t.me/Kseja_K" target="_blank" rel="noopener">Напишите в Telegram</a> или <a href="mailto:kseja@mail.ru">на почту →</a></p>
     </div>
   </div>
 </section>
@@ -692,27 +716,27 @@ button,input,select,textarea{font:inherit;color:inherit}
         <h3 class="panel__title">Что будем писать?</h3>
         <div class="cards" role="radiogroup" aria-label="Сюжет картины">
           <button class="card" data-subject="portrait" role="radio" aria-checked="false">
-            <img class="card__thumb" src="por.jpg" alt="Портрет" loading="lazy">
+            <span class="card__thumb-wrap"><img class="card__thumb" src="por.jpg" alt="Портрет" loading="lazy"></span>
             <span class="card__title">Портрет</span>
           </button>
           <button class="card" data-subject="multi" role="radio" aria-checked="false">
-            <img class="card__thumb" src="mno.jpg" alt="Многофигурная композиция" loading="lazy">
+            <span class="card__thumb-wrap"><img class="card__thumb" src="mno.jpg" alt="Многофигурная композиция" loading="lazy"></span>
             <span class="card__title">Многофигурная композиция</span>
           </button>
           <button class="card" data-subject="still" role="radio" aria-checked="false">
-            <img class="card__thumb" src="nat.jpg" alt="Натюрморт" loading="lazy">
+            <span class="card__thumb-wrap"><img class="card__thumb" src="nat.jpg" alt="Натюрморт" loading="lazy"></span>
             <span class="card__title">Натюрморт</span>
           </button>
           <button class="card" data-subject="landscape" role="radio" aria-checked="false">
-            <img class="card__thumb" src="pey.jpg" alt="Пейзаж" loading="lazy">
+            <span class="card__thumb-wrap"><img class="card__thumb" src="pey.jpg" alt="Пейзаж" loading="lazy"></span>
             <span class="card__title">Пейзаж</span>
           </button>
           <button class="card" data-subject="interior" role="radio" aria-checked="false">
-            <img class="card__thumb" src="int.jpg" alt="Интерьерная картина" loading="lazy">
+            <span class="card__thumb-wrap"><img class="card__thumb" src="int.jpg" alt="Интерьерная картина" loading="lazy"></span>
             <span class="card__title">Интерьерная картина</span>
           </button>
           <button class="card" data-subject="unknown" role="radio" aria-checked="false">
-            <img class="card__thumb" src="vop.jpg" alt="Не знаю / помогите выбрать" loading="lazy">
+            <span class="card__thumb-wrap"><img class="card__thumb" src="vop.jpg" alt="Не знаю / помогите выбрать" loading="lazy"></span>
             <span class="card__title">Не знаю / помогите выбрать</span>
           </button>
         </div>
