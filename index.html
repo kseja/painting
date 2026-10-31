@@ -129,12 +129,14 @@ button,input,select,textarea{font:inherit;color:inherit}
 .work__meta{display:block;padding:10px 4px 0}
 .work__title{display:block;font-weight:600;font-size:15px;line-height:1.3}
 .work__desc{display:block;font-size:13px;color:var(--ink-muted)}
+.work__price{display:block;font-size:14px;font-weight:600;color:var(--accent);margin-top:2px}
 @media(max-width:600px){
   .work__title{font-size:13px;}
   .work__desc{font-size:12px;}
+  .work__price{font-size:13px;}
 }
 
-/* REVIEWS (compact strip) */
+/* REVIEWS */
 .reviews{
   background:var(--accent-soft);border-radius:16px;
   padding:16px 20px;
@@ -182,7 +184,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .panel__actions .btn{flex:1 1 auto}
 .panel__alt{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
 
-/* CARD: сюжеты с картинками */
+/* CARD */
 .cards{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -323,7 +325,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   }
 }
 
-/* LIGHTBOX — крупнее */
+/* LIGHTBOX */
 .lightbox{
   position:fixed;inset:0;background:rgba(20,30,22,.88);
   display:grid;place-items:center;padding:20px;z-index:100;
@@ -343,6 +345,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 }
 .lightbox__meta{padding:24px}
 .lightbox__meta h3{margin-top:0}
+.lightbox__price{
+  font-family:'Manrope',sans-serif;font-weight:700;
+  font-size:22px;color:var(--accent);margin:8px 0 16px;
+}
 .lightbox__close{
   position:absolute;top:16px;right:16px;
   width:44px;height:44px;border-radius:50%;border:0;
@@ -372,6 +378,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   .lightbox__nav--prev{left:8px}
   .lightbox__nav--next{right:8px}
   .lightbox__meta{padding:16px}
+  .lightbox__price{font-size:18px;}
 }
 
 /* CTA + FOOTER */
@@ -478,7 +485,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <section class="section" id="gallery">
   <div class="container">
     <h2>Галерея работ</h2>
-    <p class="section__lead">Несколько примеров. Нажмите на работу — откроется полный просмотр со стрелками: листайте все работы по очереди.</p>
+    <p class="section__lead">Несколько примеров с примерными ценами. Нажмите на работу — откроется полный просмотр со стрелками: листайте все работы по очереди.</p>
     <div class="gallery" id="gallery-grid"></div>
   </div>
 </section>
@@ -716,6 +723,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     <div class="lightbox__meta">
       <h3 id="lb-title">—</h3>
       <p id="lb-desc" class="muted">—</p>
+      <div class="lightbox__price" id="lb-price">—</div>
       <button class="btn btn--primary" id="lb-want" type="button">Хочу похожую</button>
     </div>
   </div>
@@ -1046,21 +1054,21 @@ button,input,select,textarea{font:inherit;color:inherit}
   $('#copy-btn').addEventListener('click', copyConfig);
   $('#copy-btn-2').addEventListener('click', copyConfig);
 
-  /* ========== GALLERY — перемешанный порядок ========== */
+  /* ========== GALLERY — с примерными ценами ========== */
   const WORKS = [
-    { title:'Нежность',                        size:{w:60, h:40},  src:'3.jpg'  },
-    { title:'Женский портрет',                 size:{w:60, h:40},  src:'11.jpg' },
-    { title:'Пионы',                           size:{w:50, h:40},  src:'1.jpg'  },
-    { title:'К. Маковский. Под венец. Копия',  size:{w:120,h:80},  src:'13.jpg' },
-    { title:'Лесная дорога',                   size:{w:40, h:30},  src:'5.jpg'  },
-    { title:'Портрет мальчика',                size:{w:40, h:40},  src:'9.jpg'  },
-    { title:'Серебро 2',                       size:{w:30, h:30},  src:'7.jpg'  },
-    { title:'Сирень',                          size:{w:50, h:70},  src:'2.jpg'  },
-    { title:'Мужской портрет',                 size:{w:100,h:70},  src:'12.jpg' },
-    { title:'Прудик',                          size:{w:40, h:30},  src:'4.jpg'  },
-    { title:'Портрет девочки',                 size:{w:40, h:40},  src:'10.jpg' },
-    { title:'Серебро',                         size:{w:30, h:30},  src:'6.jpg'  },
-    { title:'Семья',                           size:{w:25, h:25},  src:'8.jpg'  }
+    { title:'Нежность',                        size:{w:60, h:40},  price:24000,  src:'3.jpg'  },
+    { title:'Женский портрет',                 size:{w:60, h:40},  price:31200,  src:'11.jpg' },
+    { title:'Пионы',                           size:{w:50, h:40},  price:20000,  src:'1.jpg'  },
+    { title:'К. Маковский. Под венец. Копия',  size:{w:120,h:80},  price:134400, src:'13.jpg' },
+    { title:'Лесная дорога',                   size:{w:40, h:30},  price:12000,  src:'5.jpg'  },
+    { title:'Портрет мальчика',                size:{w:40, h:40},  price:20800,  src:'9.jpg'  },
+    { title:'Серебро 2',                       size:{w:30, h:30},  price:9000,   src:'7.jpg'  },
+    { title:'Сирень',                          size:{w:50, h:70},  price:35000,  src:'2.jpg'  },
+    { title:'Мужской портрет',                 size:{w:100,h:70},  price:91000,  src:'12.jpg' },
+    { title:'Прудик',                          size:{w:40, h:30},  price:12000,  src:'4.jpg'  },
+    { title:'Портрет девочки',                 size:{w:40, h:40},  price:20800,  src:'10.jpg' },
+    { title:'Серебро',                         size:{w:30, h:30},  price:9000,   src:'6.jpg'  },
+    { title:'Семья',                           size:{w:25, h:25},  price:6300,   src:'8.jpg'  }
   ];
 
   const VISIBLE_COUNT = 9;
@@ -1074,6 +1082,7 @@ button,input,select,textarea{font:inherit;color:inherit}
         <span class="work__meta">
           <span class="work__title">${w.title}</span>
           <span class="work__desc">Масло · ${w.size.w}×${w.size.h} см</span>
+          <span class="work__price">≈ ${new Intl.NumberFormat('ru-RU').format(w.price)} ₽</span>
         </span>
       </button>
     `).join('');
@@ -1091,6 +1100,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     img.alt = w.title + ' — картина маслом';
     $('#lb-title').textContent = w.title;
     $('#lb-desc').textContent = `Масло · ${w.size.w}×${w.size.h} см`;
+    $('#lb-price').textContent = `≈ ${new Intl.NumberFormat('ru-RU').format(w.price)} ₽`;
   }
 
   function openLightbox(index){
