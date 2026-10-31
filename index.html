@@ -292,17 +292,16 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media(max-width:900px){
   .cards{
     grid-template-columns:repeat(3,1fr);
-    grid-auto-rows:1fr;
     gap:8px;
   }
-  .cards .card{ height:100%; }
 }
 @media(max-width:500px){
   .cards{gap:6px}
 }
 .card{
   background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:10px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:8px;
+  padding:10px;text-align:left;cursor:pointer;
+  display:flex;flex-direction:column;gap:8px;
   transition:border-color .2s,box-shadow .2s,transform .15s;
   position:relative;
 }
@@ -318,7 +317,7 @@ button,input,select,textarea{font:inherit;color:inherit}
   position:relative;
   display:block;
   width:100%;
-  padding-top:100%;
+  aspect-ratio:1 / 1;
   border-radius:10px;
   overflow:hidden;
   background:var(--tint);
@@ -622,7 +621,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     <p class="hero__lead">Эскиз и композицию согласуем до предоплаты: вы видите, что получите. Работаю официально, по договору. От 10×10 до 200×150 см.</p>
     <div class="hero__actions">
       <a href="#configurator" class="btn btn--primary">Подобрать картину</a>
-      <a href="https://t.me/Kseja_K" class="btn btn--ghost" target="_blank" rel="noopener" id="lead-magnet-btn">Пришлю 3 варианта бесплатно →</a>
+      <a href="#gallery" class="btn btn--ghost">Галерея работ</a>
     </div>
   </div>
 </header>
@@ -633,10 +632,10 @@ button,input,select,textarea{font:inherit;color:inherit}
     <img class="about__portrait" src="iam копия.jpg" alt="Екатерина Крупенко, художник-живописец" loading="lazy">
     <div>
       <h2>Кто пишет вашу картину</h2>
-      <p class="bio"><b>Екатерина Крупенко</b> — художник-живописец из Клина, выпускница Тверского областного художественного училища им. А.Г. Венецианова. Более 30 лет в живописи, член Союза художников Подмосковья с 2009 года. Работы находятся в частных коллекциях в России и за рубежом. Примеры и свежие работы пришлю в чате — напишите, и подберу похожие.</p>
+      <p class="bio"><b>Екатерина Крупенко</b> — художник-живописец из Клина, выпускница Тверского областного художественного училища им. А.Г. Венецианова. Более 30 лет в живописи, член Союза художников Подмосковья с 2009 года. Работы находятся в частных коллекциях в России и за рубежом. Примеры свежих работ пришлю в чате — напишите, подберу похожие.</p>
       <p>Пишу маслом в разных жанрах: от миниатюры 10×10 до панно 2×1,5 м. Помимо масла работаю в акварели и графике — для отдельных задач.</p>
       <p>Каждый заказ начинается с обсуждения деталей и композиции: вы видите, что получите, до начала работы.</p>
-      <p class="note">Копии известных работ выполняю с обсуждением прав в каждом случае — расскажите, для чего нужна копия, и подскажу, как оформить корректно.</p>
+      <p class="note">Копии известных работ выполняю с обсуждением прав в каждом случае — расскажите, для чего нужна копия, подскажу, как оформить корректно.</p>
       <p class="cta-line">Хотите обсудить идею или прислать референс? <a href="https://t.me/Kseja_K" target="_blank" rel="noopener">Напишите в Telegram</a> или <a href="mailto:kseja@mail.ru">на почту →</a></p>
     </div>
   </div>
@@ -1417,7 +1416,7 @@ button,input,select,textarea{font:inherit;color:inherit}
     { title:'Лесной пруд',                     size:{w:40, h:30}, price:14400,  src:'4.jpg',   desc:'Пейзаж, камерный формат' },
     { title:'Портрет девочки',                 size:{w:40, h:40}, price:24960,  src:'10.jpg',  desc:'Детский портрет по фото' },
     { title:'Серебристый натюрморт',           size:{w:30, h:30}, price:10800,  src:'6.jpg',   desc:'Натюрморт в холодных тонах' },
-    { title:'Семейный портрет',                size:{w:25, h:25}, price:7500,   src:'8.jpg',   desc:'Портрет по фото, 2 фигуры' }
+    { title:'Птички',                          size:{w:25, h:25}, price:7500,   src:'8.jpg',   desc:'Анималистический жанр' }
   ];
 
   function initFeatured(){
@@ -1556,7 +1555,6 @@ button,input,select,textarea{font:inherit;color:inherit}
 
   const leadText = 'Здравствуйте! Помогите подобрать картину — пришлите, пожалуйста, 3 варианта под мой запрос и цены.';
   const leadUrl = 'https://t.me/Kseja_K?text=' + encodeURIComponent(leadText);
-  const lm1 = $('#lead-magnet-btn'); if(lm1) lm1.href = leadUrl;
   const lm2 = $('#cta-lead-magnet'); if(lm2) lm2.href = leadUrl;
 
   $('#year').textContent = new Date().getFullYear();
